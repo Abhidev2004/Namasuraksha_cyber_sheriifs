@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crime Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Crime Registration Form</h2>
+        <form action="process_crime_registration.php" method="POST">
+            <label for="crime_id">Crime ID:</label>
+            <input type="text" id="crime_id" name="crime_id" placeholder="Enter crime id" required><br><br>
+
+            <label for="crime_type">Crime Type:</label><br>
+            <select id="crime_type" name="crime_type">
+                <option value="">Select Crime Type</option>
+                <option value="theft">Theft</option>
+                <option value="assault">Assault</option>
+                <option value="fraud">Fraud</option>
+                <option value="burglary">Burglary</option>
+                <option value="robbery">Robbery</option>
+                <option value="homicide">Homicide</option>
+                <option value="kidnapping">Kidnapping</option>
+                <option value="arson">Arson</option>
+                <option value="vandalism">Vandalism</option>
+                <option value="cybercrime">Cybercrime</option>
+                <option value="domestic_violence">Domestic Violence</option>
+                <option value="sexual_assault">Sexual Assault</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <input type="submit" value="Register Crime">
+        </form>
+    </div>
+</body>
+</html>

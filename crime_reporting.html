@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crime Reporting Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .submit-button {
+            background-color: #4c96af; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+        }
+
+        .submit-button:hover {
+            background-color: #45a049; 
+            box-shadow: 0 3px 7px rgba(0,0,0,0.3); 
+        }
+
+        .submit-button:active {
+             background-color: #367c39;  
+             box-shadow: 0 1px 2px rgba(0,0,0,0.2); 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Crime Reporting Form</h2>
+        <form action="process_crime_report.php" method="POST"> 
+            <label for="fir_id">FIR ID:</label>
+            <input type="text" id="fir_id" name="fir_id" placeholder="Enter FIR ID" required><br><br>
+
+            <label for="complaint_given_by">Complainant Name:</label>
+            <input type="text" id="complaint_given_by" name="complaint_given_by"  required><br><br>
+
+            <label for="crime_id">Crime ID:</label>
+            <input type="text" id="crime_id" name="crime_id" placeholder="Enter crime ID" required><br><br>
+
+            <label for="crime_type">Crime Type:</label>
+            <select id="crime_type" name="crime_type">
+                <option value="">Select Crime Type</option>
+                <option value="theft">Theft</option>
+                <option value="assault">Assault</option>
+                <option value="fraud">Fraud</option>
+                <option value="burglary">Burglary</option>
+                <option value="robbery">Robbery</option>
+                <option value="homicide">Homicide</option>
+                <option value="kidnapping">Kidnapping</option>
+                <option value="arson">Arson</option>
+                <option value="vandalism">Vandalism</option>
+                <option value="cybercrime">Cybercrime</option>
+                <option value="domestic_violence">Domestic Violence</option>
+                <option value="sexual_assault">Sexual Assault</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label for="case_status">Case Status:</label>
+            <select id="case_status" name="case_status">
+                <option value="">Select Case Status</option>
+                <option value="open">Open</option>
+                <option value="closed">Closed</option>
+                <option value="investigating">Under Investigation</option>
+                <option value="solved">Solved</option>
+                <option value="pending_trial">Pending Trial</option>
+            </select><br><br>
+
+            <label for="no_of_casualties">Number of Casualties:</label><br>
+            <input type="number" id="no_of_casualties" name="no_of_casualties" value="0" min="0"><br><br>
+
+            <label for="deceased">Deceased (If Any):</label><br>
+            <input type="text" id="deceased" name="deceased" placeholder="Enter names if any"><br><br>
+
+            <label for="suspects">Suspects:</label><br>
+            <input type="text" id="suspects" name="suspects" placeholder="Enter suspect details"><br><br>
+
+            <label for="complaint_in_brief">Complaint in Brief:</label><br>
+            <textarea id="complaint_in_brief" name="complaint_in_brief" rows="4" cols="50" placeholder="Enter complaint details"></textarea><br><br>
+
+            <input type="submit" value="Submit Report" class="submit-button">
+        </form>
+    </div>
+</body>
+</html>
